@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+
+{
+	char Ap = 'a';
+
+	while (Ap <= 'z')
+	{
+
+		if(Ap != 'q' && Ap != 'e')
+		{
+			putchar(Ap);
+
+		}
+		Ap++;
+
+	}
+	putchar('\n');
+	return (0);
+}

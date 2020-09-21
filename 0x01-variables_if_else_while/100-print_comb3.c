@@ -9,6 +9,7 @@ int main(void)
 {
 	int num = 48;
 	int num2;
+
 	while (num <= 57)
 	{
 		for (num2 = 48; num2 <= 57; num2++)

@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * jack_bauer - Prints minutes on a day.
+ * jack_bauer - Prints minutes of a day.
  *
  */
 void jack_bauer(void)
@@ -28,16 +28,10 @@ void jack_bauer(void)
 						num2 = 58;
 						num3 = 58;
 						break;
-
 					}
-
 				}
-
 			}
-
 		}
 		num1 = 48;
-
 	}
-
 }

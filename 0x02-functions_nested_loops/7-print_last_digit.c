@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _print_last_digit - prits the last digit of a number.
+ * print_last_digit - prits the last digit of a number.
  * @num: character to test.
  * Return: value of the last digit.
  */

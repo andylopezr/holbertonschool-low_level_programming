@@ -6,16 +6,19 @@
  * Function prototypes
  */
 
-/*writes the character c to stdout */
+/* writes the character c to stdout */
 int _putchar(char c);
 
-/*prints the alphabet in lowercase */
+/* prints the alphabet in lowercase */
 void print_alphabet(void);
 
-/*prints the alphabet in lowercase x10 */
+/* prints the alphabet in lowercase x10 */
 void print_alphabet_x10(void);
 
-/*checks for lowercase character. */
+/* checks for lowercase character. */
 int _islower(int c);
+
+/* checks for alphabetic character. */
+int _isalpha(int c);
 
 #endif /* _SAMPLE_HEADER_H_ */

@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_sign - check the code for Holberton School students.
+ * print_sign - prints the sign of a number.
  * @n: character to test.
  * Return: 1 if greater than 0, 0 if zero, -1 if lesser than 0.
  */
@@ -9,7 +9,7 @@ int print_sign(int n)
 {
 	if (n > 0)
 	{
-		_putchar (42);
+		_putchar (43);
 		return (1);
 	}
 	if (n == 0)

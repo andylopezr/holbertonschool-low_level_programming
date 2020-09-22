@@ -27,4 +27,7 @@ int print_sign(int n);
 /* computes the absolute value of an integer. */
 int _abs(int);
 
+/* prints the las digit of a number */
+int print_last_digit(int);
+
 #endif /* _SAMPLE_HEADER_H_ */

@@ -9,4 +9,7 @@
 /*writes the character c to stdout */
 int _putchar(char c);
 
+/*prints the alphabet in lowercase */
+void print_alphabet(void);
+
 #endif /* _SAMPLE_HEADER_H_ */

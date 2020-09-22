@@ -15,4 +15,7 @@ void print_alphabet(void);
 /*prints the alphabet in lowercase x10 */
 void print_alphabet_x10(void);
 
+/*checks for lowercase character. */
+int _islower(int c);
+
 #endif /* _SAMPLE_HEADER_H_ */

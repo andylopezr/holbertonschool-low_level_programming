@@ -27,7 +27,10 @@ int print_sign(int n);
 /* computes the absolute value of an integer. */
 int _abs(int);
 
-/* prints the las digit of a number */
+/* prints the las digit of a number. */
 int print_last_digit(int);
 
+/* prints every minute of the day. */
+void jack_bauer(void)
+	
 #endif /* _SAMPLE_HEADER_H_ */

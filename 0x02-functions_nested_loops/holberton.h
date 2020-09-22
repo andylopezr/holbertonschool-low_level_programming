@@ -12,4 +12,7 @@ int _putchar(char c);
 /*prints the alphabet in lowercase */
 void print_alphabet(void);
 
+/*prints the alphabet in lowercase x10 */
+void print_alphabet_x10(void);
+
 #endif /* _SAMPLE_HEADER_H_ */

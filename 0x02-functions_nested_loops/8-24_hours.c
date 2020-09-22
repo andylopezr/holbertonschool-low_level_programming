@@ -1,37 +1,42 @@
 #include "holberton.h"
-
 /**
- * jack_bauer - prints every minute of the day
- **/
+ * jack_bauer - Prints minutes on a day.
+ *
+ */
 void jack_bauer(void)
 {
-	int num0;
-	int num1;
-	int num2;
-	int num3;
+	int num0, num1, num2, num3;
 
-	for (num0 = 0; num0 <= 2; num0++)
+	for (num0 = 48; num0 <= 50; num0++)
 	{
-		for (num1 = 0; num1 <= 9; num1++)
+		for (num1 = 48; num1 <= 57; num1++)
 		{
-			if (num0 == 2 && num1 == 4)
-				break;
-			for (num2 = 0; num2 <= 5; num3++)
+			for (num2 = 48; num2 <= 53; num2++)
 			{
-				for (num3 = 0; num3 <= 9; num3++)
+				for (num3 = 48; num3 <= 57; num3++)
 				{
-					_putchar(num0 + '0');
-					_putchar(num1 + '0');
+					_putchar(num0);
+					_putchar(num1);
 					_putchar(':');
-					_putchar(num2 + '0');
-					_putchar(num3 + '0');
+					_putchar(num2);
+					_putchar(num3);
 					_putchar('\n');
+					if (num3 == 57 && num2 == 53 && num1 == 51 && num0 == 50)
+					{
+						num0 = 58;
+						num1 = 58;
+						num2 = 58;
+						num3 = 58;
+						break;
+
+					}
 
 				}
 
 			}
 
 		}
+		num1 = 48;
 
 	}
 

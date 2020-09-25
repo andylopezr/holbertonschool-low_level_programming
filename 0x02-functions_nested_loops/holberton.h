@@ -42,4 +42,7 @@ int add(int, int);
 /* prints all natural numbers from n to 98, followed by a new line. */
 void print_to_98(int n);
 
+/* prints a triangle, followed by a new line. */
+void print_triangle(int size);
+
 #endif /* _SAMPLE_HEADER_H_ */

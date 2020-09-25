@@ -18,7 +18,7 @@ void print_triangle(int size)
 	}
 	else
 	{
-		borde = size - 1;
+		border = size - 1;
 
 		for (lines = 1; lines <= size; lines++)
 		{

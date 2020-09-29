@@ -2,8 +2,8 @@
 
 /**
  * _strcpy - copy string
- * @dest: array recive
- * @src: array done
+ * @src: source.
+ * @dest: destination.
  * Return: dest.
  */
 

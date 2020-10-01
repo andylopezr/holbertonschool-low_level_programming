@@ -7,10 +7,9 @@
  */
 int main(void)
 {
-	print_diagonal(0);
-	print_diagonal(2);
-	print_diagonal(10);
-	print_diagonal(-4);
-	return (0);
+	char *str;
 
+	str = "0123456789";
+	puts_half(str);
+	return (0);
 }

@@ -22,4 +22,10 @@ void print_rev(char *s);
 /* function that reverses a string. */
 void rev_string(char *s);
 
+/* prints every other character of a string, starting with the first character, followed by a new line. */
+void puts2(char *str);
+
+/* prints half of a string, followed by a new line. */
+void puts_half(char *str);
+
 #endif

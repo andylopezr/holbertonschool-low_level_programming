@@ -14,7 +14,7 @@ char *cap_string(char *str)
 	{
 		if (str[x] >= 97 && str[x] <= 122)
 		{
-			for (; y <= 12; y++)
+			for (y = 0; y <= 12; y++)
 			{
 				if (str[x - 1] == symbol[y])
 				{

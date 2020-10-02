@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
- * leet - encodes a string into 1337
- * @x: string to change
+ * *rot13 - encodes a string using rot13.
+ * @x: string to encode.
  * Return: char
  */
 char *rot13(char *x)

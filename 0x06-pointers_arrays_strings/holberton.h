@@ -1,5 +1,5 @@
-#ifndef _SAMPLE_HEADER_H_
-#define _SAMPLE_HEADER_H_
+#ifndef _HOLBERTON_H_
+#define _HOLBERTON_H_
 
 /* writes the character c to stdout. */
 int _putchar(char c);

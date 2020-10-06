@@ -16,4 +16,7 @@ unsigned int _strspn(char *s, char *accept);
 /* searches a string for any of a set of bytes. */
 char *_strpbrk(char *s, char *accept);
 
+/* sets the value of a pointer to a char. */
+void set_string(char **s, char *to);
+
 #endif

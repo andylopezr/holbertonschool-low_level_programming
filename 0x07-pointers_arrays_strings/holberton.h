@@ -19,4 +19,8 @@ char *_strpbrk(char *s, char *accept);
 /* sets the value of a pointer to a char. */
 void set_string(char **s, char *to);
 
+/* prints the chessboard. */
+void print_chessboard(char (*a)[8]);
+
+int _putchar(char c);
 #endif

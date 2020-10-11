@@ -28,4 +28,6 @@ void puts2(char *str);
 /* prints half of a string, followed by a new line. */
 void puts_half(char *str);
 
+/* convert a string to an integer. */
+int _atoi(char *s);
 #endif

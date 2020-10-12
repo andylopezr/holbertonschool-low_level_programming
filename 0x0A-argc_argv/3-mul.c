@@ -3,7 +3,7 @@
  * main - multiplies two numbers.
  *@argc: number of arguments.
  *@argv: Numbers to multiply.
- *Return: If no arguments prints Error and Returns 1. 
+ *Return: If no arguments prints Error and Returns 1.
  */
 int main(int argc, char *argv[])
 {

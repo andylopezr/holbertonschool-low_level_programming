@@ -8,14 +8,12 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *sout;
-	unsigned int i, j, l1 = 0, l2 = 0;
+	unsigned int i, j, l1, l2;
 
 	if (s1 != NULL)
-		while (*(s1 + l1))
-			l1++;
+		for (l1 = 0; *(s1 + l1); l1++)
 	if (s2 != NULL)
-		while (*(s2 + l2))
-			l2++;
+		for (l1 = 0; *(s2 + l2); l2++)
 	sout = malloc((sizeof(char) * (l1 + l2)) + 1);
 	if (sout == NULL)
 		return (NULL);

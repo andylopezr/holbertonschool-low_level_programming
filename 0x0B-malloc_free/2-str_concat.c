@@ -8,7 +8,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *sout;
-	unsigned int i, j, l1, l2;
+	unsigned int i, j, l1 = 0, l2 = 0;
 
 	if (s1 != NULL)
 		for (l1 = 0; *(s1 + l1); l1++)

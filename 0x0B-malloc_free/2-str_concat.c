@@ -17,7 +17,6 @@ char *str_concat(char *s1, char *s2)
 	sout = malloc((sizeof(char) * (l1 + l2)) + 1);
 	if (sout == NULL)
 		return (NULL);
-
 	for (i = 0; i < l1; i++)
 		*(sout + i) = *(s1 + i);
 	for (j = 0; j < l2; j++, i++)

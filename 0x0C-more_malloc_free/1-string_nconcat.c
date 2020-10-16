@@ -46,7 +46,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			p[i + k] = s2[k];
 			k++;
 		}
-		p[i + k] = NULL;
+		p[i + k] = 0;
 	}
 	return (p);
 }

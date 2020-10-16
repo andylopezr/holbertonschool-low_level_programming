@@ -33,16 +33,19 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	k = 0;
 	if (n >= j)
 	{
-		while (k <= j + 1)
+		while (k <= j)
 		{
 		p[i + k] = s2[k];
 		k++;
 		}
 	}
-	while (k < n)
+	else
 	{
-		p[j + k] = s2[k];
+		while (k < n)
+		{
+		p[i + k] = s2[k];
 		k++;
+		}
 	}
 	return (p);
 }

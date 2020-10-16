@@ -27,24 +27,21 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	while (s1[k])
 	{
-		p[k] = s1[k];
-		k++;
+		p[k] = s1[k++];
 	}
 	k = 0;
 	if (n >= j)
 	{
 		while (k <= j)
 		{
-			p[i + k] = s2[k];
-			k++;
+			p[i + k] = s2[k++];
 		}
 	}
 	else
 	{
 		while (k < n)
 		{
-			p[i + k] = s2[k];
-			k++;
+			p[i + k] = s2[k++];
 		}
 		p[i + k] = 0;
 	}

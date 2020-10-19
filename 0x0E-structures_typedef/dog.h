@@ -26,4 +26,16 @@ typedef struct dog dog_t;
 /* creates a new dog. */
 dog_t *new_dog(char *name, float age, char *owner);
 
+#include "dog.h"
+/**
+ * free_dog - frees a dog
+ *
+ * @d: dog to free
+ *
+ * Return: void
+ */
+
+/* frees dogs. */
+void free_dog(dog_t *d);
+
 #endif

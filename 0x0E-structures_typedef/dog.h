@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #ifndef STRUCTDOG_
 #define STRUCTDOG_
 /**
@@ -21,5 +22,8 @@ void print_dog(struct dog *d);
 
 /* Define a new type dog_t as a new name for the type struct dog. */
 typedef struct dog dog_t;
+
+/* creates a new dog. */
+dog_t *new_dog(char *name, float age, char *owner);
 
 #endif

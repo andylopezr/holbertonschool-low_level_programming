@@ -1,6 +1,6 @@
-#include <stdlib.h>
 #ifndef STRUCTDOG_
 #define STRUCTDOG_
+#include <stdlib.h>
 /**
  * struct dog - Variables for dog description
  * @name: Name of the dog

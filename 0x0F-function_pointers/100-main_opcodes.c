@@ -11,7 +11,7 @@
  */
 int main(int ac, char *av[])
 {
-	unsigned char *f = (unsigned char *)(long int)main;
+	unsigned char *f = (unsigned char *) (long int) main;
 	int n, i;
 
 	if (ac != 2)
@@ -28,6 +28,6 @@ int main(int ac, char *av[])
 	if (n > 0)
 		printf("%02x\n", *f++);
 	for (i = 1; i < n; i++)
-		printf("%02x", *f++);
+		printf(" %02x", *f++);
 	return (0);
 }

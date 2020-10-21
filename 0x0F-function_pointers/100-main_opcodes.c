@@ -26,8 +26,8 @@ int main(int ac, char *av[])
 		exit(2);
 	}
 	if (n > 0)
-		printf("%02x\n", f[i]);
+		printf("%02x\n", *f++);
 	for (i = 1; i < n; i++)
-		printf(" %02x", f[i]);
+		printf("%02x", *f++);
 	return (0);
 }

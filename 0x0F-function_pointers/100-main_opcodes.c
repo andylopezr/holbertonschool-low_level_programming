@@ -11,7 +11,7 @@
  */
 int main(int ac, char *av[])
 {
-	unsigned char *f = (unsigned char *)main;
+	unsigned char *f = (unsigned char *)(long int)main;
 	int n, i;
 
 	if (ac != 2)

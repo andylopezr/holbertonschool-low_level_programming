@@ -11,7 +11,7 @@
  */
 int main(int ac, char *av[])
 {
-	char *f = (char *)main;
+	unsigned char *f = (unsigned char *)main;
 	int n, i;
 
 	if (ac != 2)
@@ -25,8 +25,9 @@ int main(int ac, char *av[])
 		printf("Error\n");
 		exit(2);
 	}
+	if (n > 0)
+		printf("%02x\n", f[i]);
 	for (i = 1; i < n; i++)
-		printf(" %02hhx", f[i]);
-	printf("%02hhx\n", f[i]);
+		printf(" %02x", f[i]);
 	return (0);
 }

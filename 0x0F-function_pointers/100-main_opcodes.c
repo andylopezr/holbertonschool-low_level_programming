@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * main - print hex opcodes of its own main function.
+ * main - print hex opcodes of main up to n bytes passed in as an argument
  *
  * @ac: number of arguments
  * @av: array of argument strings
@@ -30,6 +30,6 @@ int main(int ac, char *av[])
 	for (i = 1; i < n; i++)
 		printf(" %02x", *f++);
 	if (n > 0)
-		printf(10);
+		printf("\n");
 	return (0);
 }

@@ -30,6 +30,6 @@ int main(int ac, char *av[])
 	for (i = 1; i < n; i++)
 		printf(" %02x", *f++);
 	if (n > 0)
-		printf(10)
+		printf(10);
 	return (0);
 }

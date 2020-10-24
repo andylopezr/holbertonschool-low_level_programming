@@ -6,18 +6,17 @@
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	va_list valist;
-	unsigned int i;
+	unsigned int i, j;
+	va_list list;
 
-	if (!separator)
-		separator = "";
-	if (separator)
+	va_start(list, n);
+	for (i = 0; i < n; i++)
 	{
-		va_start(valist, n);
-		for (i = 0; i < n - 1; i++)
-			printf("%d%s", va_arg(valist, int), separator);
-		printf("%d", va_arg(valist, int));
-		va_end(valist);
+		j = va_arg(list, int);
+		printf("%i", j);
+		if (separator && i < n - 1)
+			printf("%s", separator);
 	}
+	va_end(list);
 	printf("\n");
 }

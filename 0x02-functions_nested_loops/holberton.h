@@ -45,4 +45,7 @@ void print_to_98(int n);
 /* prints a triangle, followed by a new line. */
 void print_triangle(int size);
 
+/* prints the n times table, starting with 0 */
+void print_times_table(int n);
+
 #endif /* _SAMPLE_HEADER_H_ */

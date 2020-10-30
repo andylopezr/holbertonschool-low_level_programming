@@ -9,13 +9,17 @@
 size_t print_list(const list_t *h)
 {
 	const list_t *p;
-	int i;
+	unsigned int i = 0;
 
 	p = h;
-	for (i = 0; p; i++)
+
+	if (h)
 	{
-		printf("[%u] %s\n", p->len, p->str);
-		p = p->next;
+		for (i = 0; p; i++)
+		{
+			printf("[%u] %s\n", p->len, p->str);
+			p = p->next;
+		}
 	}
 	return (i);
 }

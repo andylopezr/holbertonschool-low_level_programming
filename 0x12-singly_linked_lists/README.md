@@ -1,4 +1,4 @@
-# 0x11. C - Singly linked lists
+# 0x12. C - Singly linked lists
 ## About
 An introductory project on:
 - How to build and use linked lists

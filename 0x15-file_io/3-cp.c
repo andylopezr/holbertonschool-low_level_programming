@@ -1,4 +1,5 @@
 #include "holberton.h"
+#define BUFFER 1024
 /**
  * main - copies the content of a file to another file
  * @ac: Number of arguments
@@ -8,7 +9,7 @@
 int main(int ac, char **av)
 {
 	int fd, fd_1, bt, bt_1;
-	char buffer[1024];
+	char buffer[BUFFER];
 
 	if (ac != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
@@ -21,7 +22,7 @@ int main(int ac, char **av)
 	fd_1 = open(av[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	if (fd_1 == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
-	bt = read(fd, buffer, 1024);
+	bt = read(fd, buffer, BUFFER);
 	if (bt == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
@@ -35,7 +36,7 @@ int main(int ac, char **av)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 			exit(99);
 		}
-		bt = read(fd, buffer, 1024);
+		bt = read(fd, buffer, BUFFER);
 		if (bt == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);

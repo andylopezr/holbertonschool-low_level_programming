@@ -86,17 +86,21 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
 	shash_node_t *tmp, *new_node;
-	char *alt;
 
-	if (!ht || !ht->array || ht->size == 0
-	    || !key || *key == 0 || !value)
+	if (!ht || !ht->array || ht->size == 0 || !key || *key == 0 || !value)
 		return (0);
 	index = key_index((const unsigned char *) key, ht->size);
 	tmp = ht->array[index];
 	while (tmp)
 	{
 		if (strcmp(tmp->key, key) == 0)
-			break;
+		{
+			free(tmp->value);
+			tmp->value = strdup(value);
+			if (!tmp->value)
+				return (0);
+			return (1);
+		}
 		tmp = tmp->next;
 	}
 	if (!tmp)
@@ -127,11 +131,10 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	{
 		if (strcmp(value, tmp->value) == 0)
 			return (1);
-		alt = strdup(value);
 		if (!value)
 			return (0);
 		free(tmp->value);
-		tmp->value = alt;
+		tmp->value = value;
 		hashdllsort(ht, tmp);
 	}
 	return (1);
@@ -149,7 +152,7 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 	shash_node_t *tmp;
 
 	if (!ht || !key || strlen(key) == 0)
-	  return (NULL);
+		return (NULL);
 	index = key_index((const unsigned char *) key, ht->size);
 	tmp = ht->array[index];
 	while (tmp)

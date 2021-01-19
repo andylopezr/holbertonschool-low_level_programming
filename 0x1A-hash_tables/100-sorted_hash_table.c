@@ -58,7 +58,7 @@ void hashdllsort(shash_table_t *ht, shash_node_t *movnode)
 	ptr = ptr->snext;
 	while (ptr)
 	{
-		if(strcmp(movnode->key, ptr->key) < 0)
+		if (strcmp(movnode->key, ptr->key) < 0)
 		{
 			movnode->snext = ptr;
 			movnode->sprev = ptr->sprev;
@@ -154,7 +154,7 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 	tmp = ht->array[index];
 	while (tmp)
 	{
-		if(strcmp(tmp->key, key) == 0)
+		if (strcmp(tmp->key, key) == 0)
 			return (tmp->value);
 		tmp = tmp->next;
 	}

@@ -33,7 +33,7 @@ shash_table_t *shash_table_create(unsigned long int size)
  * hashdllsort - sorts a node into the proper place in the
  * hash table's sorted list
  * @ht: hash table with sorted dll
- * @node: address of node
+ * @movnode: address of node
  */
 void hashdllsort(shash_table_t *ht, shash_node_t *movnode)
 {
@@ -208,7 +208,7 @@ void shash_table_print_rev(const shash_table_t *ht)
 }
 
 /**
- * hash_table_delete - delete a hash table
+ * shash_table_delete - delete a hash table
  * @ht: hash table to delete
  */
 void shash_table_delete(shash_table_t *ht)

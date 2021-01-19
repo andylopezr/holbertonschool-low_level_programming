@@ -95,13 +95,11 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	{
 		if (strcmp(tmp->key, key) == 0)
 		{
-			free(tmp->value);
-			tmp->value = strdup(value);
+			free(tmp->value), tmp->value = strdup(value);
 			if (!tmp->value)
 				return (0);
 			return (1);
-		}
-		tmp = tmp->next;
+		} tmp = tmp->next;
 	}
 	if (!tmp)
 	{
@@ -109,22 +107,9 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		if (!new_node)
 			return (0);
 		new_node->key = strdup(key);
-		if (!new_node->key)
-		{
-			free(new_node);
-			return (0);
-		}
 		new_node->value = strdup(value);
-		if (!new_node->value)
-		{
-			free(new_node->key);
-			free(new_node);
-			return (0);
-		}
-		new_node->next = ht->array[index];
-		ht->array[index] = new_node;
-		new_node->sprev = NULL;
-		new_node->snext = NULL;
+		new_node->next = ht->array[index], ht->array[index] = new_node;
+		new_node->sprev = NULL,	new_node->snext = NULL;
 		hashdllsort(ht, new_node);
 	}
 	else
@@ -133,8 +118,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 			return (1);
 		if (!value)
 			return (0);
-		free(tmp->value);
-		tmp->value = strdup(value);
+		free(tmp->value), tmp->value = strdup(value);
 		hashdllsort(ht, tmp);
 	}
 	return (1);

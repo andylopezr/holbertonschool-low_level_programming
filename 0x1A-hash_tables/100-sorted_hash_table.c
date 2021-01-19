@@ -134,7 +134,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		if (!value)
 			return (0);
 		free(tmp->value);
-		tmp->value = value;
+		tmp->value = strdup(value);
 		hashdllsort(ht, tmp);
 	}
 	return (1);

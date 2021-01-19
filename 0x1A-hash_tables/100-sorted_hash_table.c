@@ -91,7 +91,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	if (!ht || !ht->array || ht->size == 0
 	    || !key || *key == 0 || !value)
 		return (0);
-	index = key_index((unsigned char *) key, ht->size);
+	index = key_index((const unsigned char *) key, ht->size);
 	tmp = ht->array[index];
 	while (tmp)
 	{
@@ -148,15 +148,14 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 	unsigned long int index;
 	shash_node_t *tmp;
 
-	if (!ht || !key || strlen(key) == 0)
-		return (NULL);
+	/*if (!ht || !key || strlen(key) == 0)
+	  return (NULL);*/
 	index = key_index((const unsigned char *) key, ht->size);
 	tmp = ht->array[index];
 	while (tmp)
 	{
 		if (strcmp(tmp->key, key) == 0)
-			return (tmp->value);
-		tmp = tmp->next;
+			return (strdup(tmp->value));
 	}
 	return (NULL);
 }

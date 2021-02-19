@@ -1,0 +1,23 @@
+#using all rule - with variables
+CC = gcc
+SRC = holberton.c main.c
+OBJ = $(SRC:.c=.o)
+NAME = holberton
+RM = rm -f
+CFLAGS = -Wall -Werror -Wextra -pedantic
+# "@" says to put the output in the file named ond the left of the :
+# "<" is the first item in the dependencies list
+%.o: %.c m.h
+	$(CC) -c -o $@ $<
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+#deletes all emacs temp files with exe
+clean:
+	$(RM) *~ $(NAME)
+#deletes the .o files
+oclean:
+	$(RM) $(OBJ)
+#deletes emacs temp files tue exe and .o files
+fclean: clean oclean
+#forces recompilation of all source files
+re: oclean all

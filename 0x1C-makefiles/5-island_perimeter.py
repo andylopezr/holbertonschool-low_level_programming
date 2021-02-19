@@ -4,9 +4,9 @@
 
 def island_perimeter(grid):
     """Function that returns the perimeter of the island described in grid"""
-    rows, columns, perimeter = len(grid), len(grid[0]), 0
-    for row in range(rows):
-        for position in range(columns):
+    perimeter = 0
+    for row in range(len(grid)):
+        for position in range(len(grid[row])):
             if grid[row][position] == 0:
                 continue
             if row == 0 or grid[row - 1][position] == 0:

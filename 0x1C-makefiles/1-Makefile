@@ -1,0 +1,5 @@
+#using all rule - with variables for compiler and source builds your executable
+CC=gcc
+SRC = holberton.c main.c
+all:
+	$(CC) $(SRC) -o holberton

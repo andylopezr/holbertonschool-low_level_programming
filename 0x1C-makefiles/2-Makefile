@@ -1,9 +1,9 @@
 #using all rule - with variables
 all:
-CC=gcc
-SRC=holberton.c main.c
-OBJ=$(SRC:.c=.o)
-NAME=holberton
+CC = gcc
+SRC = holberton.c main.c
+OBJ = $(SRC:.c=.o)
+NAME = holberton
 # creates the .o files dependinding upon the .c version and the header
 # "@" says to put the output in the file named ond the left of the :
 # "<" is the first item in the dependencies list

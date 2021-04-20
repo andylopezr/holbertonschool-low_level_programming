@@ -24,7 +24,7 @@ An introductory project on:
 **[5-O](5-O)** - `space complexity` (worst case) of a binary search in an array of size `n`?
 
 **[6-O](6-O)** - `space complexity` of this function / algorithm? array of size `n`?
-```
+```c
 int **allocate_map(int n, int m)
 {
      int **map;

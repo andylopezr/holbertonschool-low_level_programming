@@ -1,5 +1,6 @@
 # 0x1E-search_algorithms
 <img src=https://blog.ndepend.com/wp-content/uploads/global-coding-standards-2-960x460.jpg>
+
 ## About
 An introductory project on:
 * What is a search algorithm
